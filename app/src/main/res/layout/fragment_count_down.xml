@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.CountDownFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/select_container"
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true">
+
+            <con.huajia.clock.view.SelectView
+                android:id="@+id/hour_select"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/hour_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="时"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toEndOf="@+id/hour_select"/>
+
+            <View
+                android:id="@+id/line_left"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_C1C1C1"
+                app:layout_constraintStart_toEndOf="@+id/hour_text"
+                android:layout_marginStart="12dp"/>
+
+            <con.huajia.clock.view.SelectView
+                android:id="@+id/minute_select"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                app:layout_constraintStart_toStartOf="@id/line_left"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/minute_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="分"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toEndOf="@+id/minute_select"/>
+
+            <View
+                android:id="@+id/line_right"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_C1C1C1"
+                app:layout_constraintStart_toEndOf="@+id/minute_text"
+                android:layout_marginStart="12dp"/>
+
+            <con.huajia.clock.view.SelectView
+                android:id="@+id/second_select"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                app:layout_constraintStart_toStartOf="@id/line_right"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/second_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="秒"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toEndOf="@+id/second_select"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/time_container"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="60dp"
+                android:text="00:00:00"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp">
+        <ImageButton
+            android:id="@+id/button_start"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/button_start"
+            android:scaleType="centerCrop"
+            android:background="@null"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageButton
+            android:id="@+id/button_end"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/button_end"
+            android:scaleType="centerCrop"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:background="@null"
+            android:layout_marginStart="80dp"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/button_stop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/button_stop"
+            android:scaleType="centerCrop"
+            android:background="@null"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="80dp"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/button_continue"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/button_start"
+            android:scaleType="centerCrop"
+            android:background="@null"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="80dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

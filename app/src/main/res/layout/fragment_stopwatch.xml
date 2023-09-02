@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/stopwatchParent"
+    tools:context=".fragment.StopwatchFragment">
+
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="00:00.00"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="60sp"
+        android:layout_marginBottom="200dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        app:layout_constraintTop_toBottomOf="@+id/time"
+        android:layout_marginTop="50dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageButton
+        android:id="@+id/button_start"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/button_start"
+        android:scaleType="centerCrop"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="70dp"/>
+
+    <ImageButton
+        android:id="@+id/button_markLeft"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/button_mark"
+        android:scaleType="centerCrop"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="70dp"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:id="@+id/button_endLeft"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/button_end"
+        android:scaleType="centerCrop"
+        android:background="@null"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="70dp"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/button_startRight"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/button_start"
+        android:scaleType="centerCrop"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="70dp"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:id="@+id/button_stopRight"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/button_stop"
+        android:scaleType="centerCrop"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="70dp"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
